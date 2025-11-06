@@ -74,3 +74,50 @@ footer {
     color: #fff;
 }
 
+
+/* Container dos dados */
+.dice-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Caixa individual de cada dado */
+.dice-box {
+    background: white;
+    width: 180px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.dice-box img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Botão amarelo */
+.btn {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background: #ffcc00;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.btn:hover {
+    background: #e0b000;
+}
+
+/* Resultado da rolagem */
+.result {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}

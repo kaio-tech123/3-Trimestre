@@ -2,24 +2,81 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RPG Magic Dice</title>
-    <link rel="stylesheet" href="indexrpg.css">
+    <title>RPG Magic Dice - Rolagem de Dados</title>
+    <link rel="stylesheet" href="indexDADOS.css">
 </head>
 <body>
-    
-    <header>
+
+    <header class="top-nav">
         <div class="logo">
-            <img src="https://i.imgur.com/5J1y7zX.png" alt="Logo RPG Magic Dice">
+            <img src="img/logo rpg de uma peste.jpg">
         </div>
+
         <nav>
-            <a href="indexrpg.html">Início</a>
-            <a href="#">Dados</a>
-            <a href="#">Fichas</a>
-            <a href="#">Livros de regras</a>
-            <a href="#">Sobre nós</a>
+            <a class="menu-btn" href="indexrpg.html">Início</a>
+            <a class="menu-btn" href="#">Dados</a>
+            <a class="menu-btn" href="#">Fichas</a>
+            <a class="menu-btn" href="#">Livros de regras</a>
+            <a class="menu-btn" href="#">Sobre nós</a>
         </nav>
     </header>
 
+    <h1 class="titulo">Rolagem de dados</h1>
+
+    <div class="dice-container">
+
+        <div class="dice-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/4-sided_dice.svg/512px-4-sided_dice.svg.png">
+            <button class="btn" onclick="roll('d4',4)">Rolar d4</button>
+            <div id="d4" class="result">–</div>
+        </div>
+
+        <div class="dice-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/6sided_dice.svg/512px-6sided_dice.svg.png">
+            <button class="btn" onclick="roll('d6',6)">Rolar d6</button>
+            <div id="d6" class="result">–</div>
+        </div>
+
+        <div class="dice-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/8-sided_dice.svg/512px-8-sided_dice.svg.png">
+            <button class="btn" onclick="roll('d8',8)">Rolar d8</button>
+            <div id="d8" class="result">–</div>
+        </div>
+
+        <div class="dice-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/10-sided_dice.svg/512px-10-sided_dice.svg.png">
+            <button class="btn" onclick="roll('d10',10)">Rolar d10</button>
+            <div id="d10" class="result">–</div>
+        </div>
+
+        <div class="dice-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/12-sided_dice.svg/512px-12-sided_dice.svg.png">
+            <button class="btn" onclick="roll('d12',12)">Rolar d12</button>
+            <div id="d12" class="result">–</div>
+        </div>
+
+        <div class="dice-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/20_sided_dice.svg/512px-20_sided_dice.svg.png">
+            <button class="btn" onclick="roll('d20',20)">Rolar d20</button>
+            <div id="d20" class="result">–</div>
+        </div>
+
+        <div class="dice-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Percentile_dice_set.svg/512px-Percentile_dice_set.svg.png">
+            <button class="btn" onclick="roll('d100',100)">Rolar d100</button>
+            <div id="d100" class="result">–</div>
+        </div>
+
+    </div>
+
+<script>
+function roll(id, max) {
+    let result = Math.floor(Math.random() * max) + 1;
+    document.getElementById(id).innerText = result;
+}
+</script>
+
 </body>
 </html>
+
+
