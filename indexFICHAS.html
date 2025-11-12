@@ -2,301 +2,35 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RPG Magic Dice</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(to right, #ccc, #eee);
-    }
-
-    /* Barra superior */
-    header {
-      display: flex;
-      align-items: center;
-      background-color: #600000;
-      color: white;
-      padding: 10px 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Logo */
-    .logo {
-      display: flex;
-      align-items: center;
-      margin-right: 30px;
-    }
-
-    .logo img {
-      height: 50px;
-      margin-right: 10px;
-    }
-
-    /* Menu */
-    nav {
-      display: flex;
-      gap: 10px;
-    }
-
-    nav button {
-      background-color: #ffcc00;
-      border: 2px solid #000;
-      border-radius: 6px;
-      color: #000;
-      font-weight: bold;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-
-    nav button:hover {
-      background-color: #ffe45c;
-    }
-
-    /* Conteúdo */
-    main {
-      padding: 40px;
-    }
-
-    /* Botões laterais */
-    .painel {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .painel button {
-      display: flex;
-      align-items: center;
-      background-color: #600000;
-      color: white;
-      border: 2px solid #ffcc00;
-      border-radius: 4px;
-      padding: 10px 15px;
-      font-size: 16px;
-      cursor: pointer;
-      width: 200px;
-      transition: background-color 0.2s;
-    }
-
-    .painel button:hover {
-      background-color: #8b0000;
-    }
-
-    .painel button::before {
-      content: "+";
-      margin-right: 10px;
-      font-weight: bold;
-    }
-
-    .painel button:nth-child(2)::before {
-      content: "🔍";
-    }
-  </style>
+  <title>RPG Magic Dice - Fichas</title>
+  <link rel="stylesheet" href="indexFICHAS.css">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/D20_icon.png" alt="Logo">
-      <strong>RPG MAGIC DICE</strong>
-    </div>
 
-    <nav>
-      <button>Início</button>
-      <button>Dados</button>
-      <button>Fichas</button>
-      <button>Livros de regras</button>
-      <button>Sobre nós</button>
-    </nav>
-  </header>
+  
+  <header class="top-nav">
+        <div class="logo">
+            <img src="img/rpg de uma peste.jpg">
+        </div>
 
-  <main>
-    <div class="painel">
+        <nav>
+            <a class="menu-btn" href="indexrpg.html">Início</a>
+            <a class="menu-btn" href="indexDADOS.html">Dados</a>
+            <a class="menu-btn" href="#">Fichas</a>
+            <a class="menu-btn" href="#">Livros de regras</a>
+            <a class="menu-btn" href="#">Sobre nós</a>
+        </nav>
+    </header>
+  
+  <div class="container">
+    <div class="sidebar">
       <button>Criar nova ficha</button>
-      <button>Nenhuma ficha feita</button>
+      <button disabled>Nenhuma ficha feita</button>
     </div>
-  </main>
-</body>
-</html>
-<metacharset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>O que é a ficha - RPG Magic Dice</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(to right, #ccc, #eee);
-      color: #000;
-    }/* Cabeçalho */
-    header {
-      display: flex;
-      align-items: center;
-      background-color: #600000;
-      color: white;
-      padding: 10px 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      margin-right: 30px;
-    }.logo img {
-      height: 50px;
-      margin-right: 10px;
-    }
-
-    .logo strong {
-      font-size: 16px;
-      color: white;
-    }
-
-    nav {
-      display: flex;
-      gap: 10px;
-    }
-
-    nav button {
-      background-color: #ffcc00;
-      border: 2px solid #000;
-      border-radius: 6px;
-      color: #000;
-      font-weight: bold;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-
-    nav button:hover {
-      background-color: #ffe45c;
-    }
-
-    /* Conteúdo */
-    main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px;
-    }
-
-    h1 {
-      text-transform: lowercase;
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 30px;
-    }
-
-    .content {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 30px;
-      max-width: 900px;
-      text-align: justify;
-    }
-
-    .text-block {
-      width: 45%;
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    .divider {
-      width: 2px;
-      background-color: #000;
-      height: auto;
-    }
-
-    /* Seta */
-    .arrow {
-      font-size: 36px;
-      font-weight: bold;
-      margin-top: 20px;
-      text-align: right;
-      width: 100%;
-      padding-right: 40px;
-    }
-  </style></head>
-<body>
-  <header>
-    <div class="<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Logo RPG Magic Dice</title>
-  <style>
-    body {
-      background-color: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    .logo-container {
-      text-align: center;
-    }
-
-    .logo-container img {
-      width: 100px; /* ajuste o tamanho conforme quiser */
-      height: auto;
-    }
-
-    .logo-container h1 {
-      font-size: 18px;
-      margin-top: 10px;
-      color: #600000;
-    }
-  </style>
-</head>
-<body>
-  <div class="logo-container">
-    <img src="img/logo rpg de uma peste.jpg" alt="Logo RPG Magic Dice">
-    <h1>RPG MAGIC DICE</h1>
+    <div class="main">
+      <p>Bem-vindo ao seu painel de RPG! Crie uma ficha para começar.</p>
+    </div>
   </div>
-</body>
-</html>
-">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/D20_icon.png" alt="Logo">
-      <strong>RPG MAGIC DICE</strong>
-    </div>
 
-    <nav>
-      <button>Início</button>
-      <button>Dados</button>
-      <button>Fichas</button>
-      <button>Sobre nós</button>
-    </nav>
-  </header>
-
-  <main>
-    <h1>o que é a ficha/como funciona</h1>
-
-    <div class="content">
-      <div class="text-block">
-        A ficha de RPG é o ‘cartão de identidade’ do seu personagem dentro do jogo.
-        É nela que você anota tudo o que define quem ele é, o que ele é capaz e quais são seus recursos durante a aventura.
-        Com ela, você e o Mestre conseguem controlar a história de forma organizada e justa.
-      </div>
-
-      <div class="divider"></div>
-
-      <div class="text-block">
-        Nela, você registra informações como nome, raça e classe do seu personagem — por exemplo, se ele é um Mago élfico ou um Guerreiro humano.
-        Também existem os atributos, que representam as qualidades físicas e mentais do personagem, como Força, Inteligência e Carisma.
-        Esses atributos possuem valores que vão influenciar suas ações no jogo:
-        um personagem forte luta melhor, um inteligente resolve enigmas com mais facilidade,
-        e um carismático consegue convencer outras pessoas com mais eficiência.
-      </div>
-    </div>
-
-    <div class="arrow">→</div>
-  </main>
 </body>
 </html>
